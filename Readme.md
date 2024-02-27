@@ -1,7 +1,7 @@
 # Unix2usb
 
 <p align="center">
-  <img height="400" width="500" src="https://github.com/d10xi24/Unix2Usb/blob/main/demo/logo.png" />
+  <img height="300" width="400" src="demo/logo.png" />
 </p>
 
 ---
@@ -25,7 +25,7 @@ Unix2usb is a shell script allows you to create bootable USB drives with ventoy 
 ---
 
 <p align="center">
-  <img height="400" width="800" src="https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.gif" />
+  <img height="220" width="450" src="demo/unix2usb.gif" />
 </p>
 
 ---
@@ -43,19 +43,16 @@ Unix2usb is a shell script allows you to create bootable USB drives with ventoy 
 
 Follow on-screen prompts and instructions for each operation.
 
-5. Custom Boot Menu :
-
-<p align="left">
-  <img height="200" width="400" src="demo/Unix2usb-grub.jpg" />
-</p>
-
 ## Features
 
 - Multiboot Support
 - Fast and Easy to Use
 - ISO drag and drop Support .
 - Supports multiple package managers for installing exFAT support(automatically installed if missing)
-
+- Custom Boot Menu :
+<p align="center">
+  <img height="200" width="400" src="demo/Unix2usb-grub.jpg" />
+</p>
 
 ## License:
 
