@@ -5,13 +5,6 @@ Project Description:
 
 The Unix2usb is a shell script allows you to create bootable USB drives with ventoy bootloader. It is Fast convenient and easy to use. 
 
-## Demo
-
-<div align="center">
-  <img height="400" width="800" src="https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.gif"  />
-</div>
----
-
 ## Usage
 
 1. Clone the repository:
@@ -26,6 +19,14 @@ The Unix2usb is a shell script allows you to create bootable USB drives with ven
    ```
    ./Unix2usb.sh
    ```
+---
+
+<div align="center">
+  <img height="400" width="700" src="https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.gif"  />
+</div>
+
+---
+
 4. Optionally Run the script with appropriate command-line options:
 
     -i or -I for installation.
@@ -44,9 +45,6 @@ Follow on-screen prompts and instructions for each operation.
 - ISO drag and drop Support .
 - Supports multiple package managers for installing exFAT support.
 - ExFAT support installed (automatically installed if missing)
-
-
-![App Screenshot](https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.jpg)
 
 
 ![Logo](https://github.com/d10xi24/Unix2Usb/blob/main/demo/logo.png)

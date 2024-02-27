@@ -408,11 +408,12 @@ if [ "$MODE" = "install" -a -z "$NONDESTRUCTIVE" ]; then
 
     echo ""
     vtinfo "Done preparing $DISK."
-	vtinfo "Done preparing $DISK."
-	echo "******************************************************************************"
+	    vtinfo "Done preparing $DISK."
+	    echo "******************************************************************************"
         echo "Now you can simply copy and paste ISO files into the "UNIXISO" folder on your USB"
         echo "ISO files stored there will be detected and presented in a menu during USB boot."
         echo ""
+        echo "switching back to regular user $SUDO_USER"
         echo "Unmounting and removing TMP folder!"
 	 sudo umount TMP
 	 sudo rm -rf ./TMP
