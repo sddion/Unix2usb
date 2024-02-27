@@ -59,6 +59,5 @@ This script is licensed under the GNU General Public License (GPL). See the scri
 This Unix2USB variant allows you to create a Multiboot Bootable USB drive from Linux/Debian/Arch. 
 It works by installing Custom theme and configuration files with a Ventoy bootloader. 
 
-Ventoy binary files included in this package can be found here: 
-https://github.com/ventoy/Ventoy/releases/download/v1.0.7/ventoy-1.0.97-linux.tar.gz
+Ventoy binary files included in this package can be found [here](https://github.com/ventoy/Ventoy/releases/tag/v1.0.97)
 
