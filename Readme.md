@@ -52,7 +52,7 @@ Follow on-screen prompts and instructions for each operation.
 ![App Screenshot](https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.jpg)
 
 
-![Logo](https://github.com/d10xi24/Unix2Usb/blob/main/UNIX2USB/ventoy/theme/UNIX/logo.png)
+![Logo](https://github.com/d10xi24/Unix2Usb/blob/main/demo/logo.png)
 
 ## License:
 
