@@ -23,7 +23,7 @@
 
 
 VENT_VER="ventoy-1.0.97"
-  . ./$VENT_VER/tool/ventoy.sh
+  #. ./$VENT_VER/tool/ventoy_lib.sh
   echo -e '\0033\0143'
 
 # Declare arrays to store device names, sizes, and models

@@ -25,7 +25,7 @@
 OLDDIR=$(pwd)
 
 if ! [ -f ./tool/ventoy_lib.sh ]; then
-    if [ -f ${0%Umix2Disk.sh}/tool/ventoy_lib.sh ]; then
+    if [ -f ${0%Unix2Disk.sh}/tool/ventoy_lib.sh ]; then
         cd ${0%Unix2Disk.sh}    
     fi
 fi
