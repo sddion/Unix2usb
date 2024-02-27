@@ -1,9 +1,12 @@
-
 # Unix2usb
 
-Project Description:
+<p align="center">
+  <img height="400" width="500" src="https://github.com/d10xi24/Unix2Usb/blob/main/demo/logo.png" />
+</p>
 
-The Unix2usb is a shell script allows you to create bootable USB drives with ventoy bootloader. It is Fast convenient and easy to use. 
+---
+
+Unix2usb is a shell script allows you to create bootable USB drives with ventoy bootloader. It is Fast convenient and easy to use. 
 
 ## Usage
 
@@ -22,7 +25,7 @@ The Unix2usb is a shell script allows you to create bootable USB drives with ven
 ---
 
 <p align="center">
-  <img height="400" width="700" src="https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.gif" />
+  <img height="400" width="800" src="https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.gif" />
 </p>
 
 ---
@@ -41,14 +44,21 @@ Follow on-screen prompts and instructions for each operation.
 
 ## Features
 
+- Multiboot Support
 - Fast and Easy to Use
 - ISO drag and drop Support .
-- Supports multiple package managers for installing exFAT support.
-- ExFAT support installed (automatically installed if missing)
+- Supports multiple package managers for installing exFAT support(automatically installed if missing)
 
-
-![Logo](https://github.com/d10xi24/Unix2Usb/blob/main/demo/logo.png)
 
 ## License:
 
 This script is licensed under the GNU General Public License (GPL). See the script header for details.
+
+## Conclusion :
+
+This Unix2USB variant allows you to create a Multiboot Bootable USB drive from Linux/Debian/Arch. 
+It works by installing Custom theme and configuration files with a Ventoy bootloader. 
+
+Ventoy binary files included in this package can be found here: 
+https://github.com/ventoy/Ventoy/releases/download/v1.0.7/ventoy-1.0.97-linux.tar.gz
+
