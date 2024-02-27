@@ -47,7 +47,6 @@ The unix2usb is a shell script allows you to create bootable USB drives with ven
 
 Follow on-screen prompts and instructions for each operation.
 
-## Screenshots
 
 ![App Screenshot](https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.jpg)
 

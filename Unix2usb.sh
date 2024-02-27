@@ -156,12 +156,12 @@ fi
      sudo umount "/dev/$selected_device"
      echo -e "\n*************************************************"
      echo " UNIX is already installed. But you can upgrade or reinstall."
-     sudo ./UNIX2Disk.sh -u -L UNIX "/dev/$selected_device"
+     sudo ./Unix2Disk.sh -u -L UNIX "/dev/$selected_device"
    else
      sudo umount "/dev/$selected_device"
      echo -e "\n*************************************************"
      echo " This device has not yet been prepared."
-     sudo ./UNIX2Disk.sh -I -L UNIX "/dev/$selected_device"
+     sudo ./Unix2Disk.sh -I -L UNIX "/dev/$selected_device"
    fi
   exit
 }

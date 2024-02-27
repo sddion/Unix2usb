@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#  Unix2usb.sh
+#  Unix2Disk.sh
 #  
 #  Copyright 2024 dion <dion@levatine>
 #  
@@ -24,9 +24,9 @@
 
 OLDDIR=$(pwd)
 
-if ! [ -f ./tool/ventoy.sh ]; then
-    if [ -f ${0%UUI2Disk.sh}/tool/ventoy.sh ]; then
-        cd ${0%UUI2Disk.sh}    
+if ! [ -f ./tool/ventoy_lib.sh ]; then
+    if [ -f ${0%Umix2Disk.sh}/tool/ventoy_lib.sh ]; then
+        cd ${0%Unix2Disk.sh}    
     fi
 fi
 
@@ -46,7 +46,7 @@ fi
 export PATH="./tool/$TOOLDIR:$PATH"
 
 echo " The following packages will be installed:"
-echo " UNIX-ISO2USB files with Ventoy Bootloader: $curver  $TOOLDIR"
+echo " Unix2Usb files with Ventoy Bootloader: $curver  $TOOLDIR"
 echo "*************************************************"
 echo ""
 
@@ -83,9 +83,9 @@ chmod +x -R ./tool/$TOOLDIR
 
 
 if [ -f /bin/bash ]; then
-    /bin/bash ./tool/UNIX.sh $*
+    /bin/bash ./tool/Unix2UsbWorker.sh $*
 else
-    ash ./tool/UNIX.sh $*
+    ash ./tool/Unix2UsbWorker.sh $*
 fi
 
 if [ -n "$OLDDIR" ]; then 

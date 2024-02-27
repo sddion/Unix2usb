@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#  UNIX.sh
+#  Unix2UsbWorker.sh
 #  
 #  Copyright 2024 dion <dion@levatine>
 #  
@@ -20,13 +20,12 @@
 #  MA 02110-1301, USA.
 #  
 #  
-# This file was modified from VentoyWorker.sh to be used with UNIX-ISO2USB.
-
- . ./tool/ventoy.sh
+# This file was modified from VentoyWorker.sh to be used with Unix2Usb.
+ . ./tool/ventoy_lib.sh
 
 print_usage() {
 
-    echo 'Usage:  UNIX2Disk.sh CMD [ OPTION ] /dev/sdX'
+    echo 'Usage:  Unix2Disk.sh CMD [ OPTION ] /dev/sdX'
     echo '  CMD:'
     echo '   -i  install to sdX (fails if disk is already prepared for UNIX-ISO2USB)'
     echo '   -I  force install to sdX (wipe and reinstall)'
@@ -41,6 +40,7 @@ print_usage() {
     echo '   -n          try non-destructive installation (only for install)'
     echo ''
 }
+
 
 mount_disk() {
     DiskOrPart="$1"
@@ -103,7 +103,9 @@ while [ -n "$1" ]; do
             exit 1
         fi
         DISK=$1
-
+        # Resolve symlinks now, will be needed to look up information about the device in
+        # the /sys/ filesystem, for example /sys/class/block/${DISK#/dev/}/start
+        # The main use case is supporting /dev/disk/by-id/ symlinks instead of raw devices
         if [ -L "$DISK" ]; then
             DISK=$(readlink -e -n "$DISK")
         fi
@@ -125,8 +127,8 @@ fi
 if [ -e /sys/class/block/${DISK#/dev/}/start ]; then
     vterr  "$DISK is a partition, please use the whole disk."
     echo   "For example:"
-    vterr  "    sudo sh UNIX2Disk.sh -i /dev/sdb1 <=== This is wrong"
-    vtinfo "    sudo sh UNIX2Disk.sh -i /dev/sdb  <=== This is right"
+    vterr  "    sudo sh Unix2Disk.sh -i /dev/sdb1 <=== This is wrong"
+    vtinfo "    sudo sh Unix2Disk.sh -i /dev/sdb  <=== This is right"
     echo ""
     exit 1
 fi
@@ -298,6 +300,7 @@ if [ "$MODE" = "install" -a -z "$NONDESTRUCTIVE" ]; then
     vtwarn "==================== WARNING! ===================="
     echo ""
 
+
     read -p 'Continue? (y/n) '  Answer
     if [ "$Answer" != "y" ]; then
         if [ "$Answer" != "Y" ]; then
@@ -326,6 +329,10 @@ if [ "$MODE" = "install" -a -z "$NONDESTRUCTIVE" ]; then
         format_ventoy_disk_mbr $RESERVE_SIZE_MB $DISK $PARTTOOL
     fi
 
+    # format part1
+
+    # DiskSize > 32GB  Cluster Size use 128KB
+    # DiskSize < 32GB  Cluster Size use 32KB
     if [ $disk_size_gb -gt 32 ]; then
         cluster_sectors=256
     else
@@ -335,8 +342,10 @@ if [ "$MODE" = "install" -a -z "$NONDESTRUCTIVE" ]; then
     PART1=$(get_disk_part_name $DISK 1)
     PART2=$(get_disk_part_name $DISK 2)
 
+    #clean part2
     dd status=none conv=fsync if=/dev/zero of=$DISK bs=512 count=32 seek=$part2_start_sector
 
+    #format part1
     wait_and_create_part ${PART1} ${PART2}    
     if [ -b ${PART1} ]; then
         vtinfo "Format partition 1 ${PART1} ..."
@@ -371,10 +380,14 @@ if [ "$MODE" = "install" -a -z "$NONDESTRUCTIVE" ]; then
 
     xzcat ./ventoy/ventoy.disk.img.xz | dd status=none conv=fsync of=$DISK bs=512 count=$VENTOY_SECTOR_NUM seek=$part2_start_sector
 
+    #test UUID
     testUUIDStr=$(vtoy_gen_uuid | hexdump -C)
     vtdebug "test uuid: $testUUIDStr"
 
+    #disk uuid
     vtoy_gen_uuid | dd status=none conv=fsync of=${DISK} seek=384 bs=1 count=16
+
+    #disk signature
     vtoy_gen_uuid | dd status=none conv=fsync of=${DISK} skip=12 seek=440 bs=1 count=4
 
     vtinfo "sync data ..."
@@ -388,21 +401,21 @@ if [ "$MODE" = "install" -a -z "$NONDESTRUCTIVE" ]; then
         vtoycli partresize -s $DISK $part2_start_sector
     fi
 	
-    vtinfo "Copying over UNIX-ISO2USb Files to ${PART1}."	
-	sudo mkdir tmp
-	sudo mount ${PART1} tmp
-	sudo cp -rf ../UNIX2USB/* ./tmp
+    vtinfo "Copying over Unix2usb Files to ${PART1}."	
+	sudo mkdir TMP
+	sudo mount ${PART1} TMP
+	sudo cp -rf ../UNIX2USB/* ./TMP
 
     echo ""
     vtinfo "Done preparing $DISK."
 	vtinfo "Done preparing $DISK."
-    echo ""
 	echo "******************************************************************************"
-	echo "Now you can simply copy and paste ISO files into the "UNIXISO" folder on your USB"
-    echo "ISO files stored there will be detected and presented in a menu during USB boot."
-    echo ""
-	 sudo umount tmp
-	 sudo rm -rf ./tmp
+        echo "Now you can simply copy and paste ISO files into the "UNIXISO" folder on your USB"
+        echo "ISO files stored there will be detected and presented in a menu during USB boot."
+        echo ""
+        echo "Unmounting and removing TMP folder!"
+	 sudo umount TMP
+	 sudo rm -rf ./TMP
         vtinfo "All Done Bootable USB Created !"
         exit
 
@@ -436,7 +449,7 @@ elif [ "$MODE" = "install" -a -n "$NONDESTRUCTIVE" ]; then
     echo ''
 
     vtwarn "Attention:"
-    vtwarn "UNIX-ISO2USB will try non-destructive installation on $DISK if possible."
+    vtwarn "Unix2Usb will try non-destructive installation on $DISK if possible."
     echo ""
 
     read -p 'Continue? (y/n) '  Answer
@@ -573,16 +586,16 @@ elif [ "$MODE" = "install" -a -n "$NONDESTRUCTIVE" ]; then
     fi
     
 else
-    vtdebug "update Ventoy ..."
+    vtdebug "updating boot files..."
     
     oldver=$(get_disk_ventoy_version $DISK)
     if [ $? -ne 0 ]; then
         if is_disk_contains_ventoy $DISK; then
             oldver="Unknown"
         else
-            vtwarn "$DISK does not contain Ventoy or data corrupted"
+            vtwarn "$DISK does not contain bootloader files or data corrupted"
             echo ""
-            vtwarn "Please use -i option if you want to install ventoy to $DISK"
+            vtwarn "Please use -i option if you want to install to $DISK"
             echo ""
             exit 1
         fi
@@ -602,7 +615,7 @@ else
     vtinfo "Upgrade operation is safe, all the data in the 1st partition (iso files and other) will be unchanged!"
     echo ""
 
-    read -p "Update Ventoy  $oldver ===> $curver   Continue? (y/n) "  Answer
+    read -p "Update $oldver ===> $curver   Continue? (y/n) "  Answer
     if [ "$Answer" != "y" ]; then
         if [ "$Answer" != "Y" ]; then
             exit 0
@@ -663,7 +676,7 @@ else
     fi
 
     echo ""
-    vtinfo "Update Ventoy on $DISK successfully finished."
+    vtinfo "Update on $DISK succeeded."
     echo ""
 
 fi
