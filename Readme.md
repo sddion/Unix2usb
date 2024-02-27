@@ -43,6 +43,12 @@ Unix2usb is a shell script allows you to create bootable USB drives with ventoy 
 
 Follow on-screen prompts and instructions for each operation.
 
+5. Custom Boot Menu :
+
+<p align="left">
+  <img height="200" width="400" src="demo/Unix2usb-grub.jpg" />
+</p>
+
 ## Features
 
 - Multiboot Support
