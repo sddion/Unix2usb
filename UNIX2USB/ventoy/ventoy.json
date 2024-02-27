@@ -1,0 +1,28 @@
+{
+  "control":[
+      { "VTOY_DEFAULT_MENU_MODE": "1" },
+      { "VTOY_TREE_VIEW_MENU_STYLE": "1" },
+      { "VTOY_MENU_TIMEOUT": "0" },
+      { "VTOY_DEFAULT_SEARCH_ROOT": "/UNIXISO" }
+  ],
+
+  "theme": [
+    {
+      "file": "/ventoy/theme/UNIX/theme.txt",
+      "ventoy_color": "#ffffff",
+      "resolution": "default"
+    }
+  ],
+  
+    "resolution_fit": 1,
+    "ventoy_left": "100%-230",
+    "ventoy_top": "100%-20",
+    "ventoy_color": "#ffffff",
+    "fonts": [
+      "/ventoy/theme/UNIX/terminus-10.pf2",
+      "/ventoy/theme/UNIX/terminus-12.pf2",
+      "/ventoy/theme/UNIX/terminus-14.pf2",
+      "/ventoy/theme/UNIX/terminus-16.pf2",
+      "/ventoy/theme/UNIX/terminus-18.pf2"
+    ]
+  }
