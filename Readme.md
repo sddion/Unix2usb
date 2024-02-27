@@ -31,14 +31,15 @@ Unix2usb is a shell script allows you to create bootable USB drives with ventoy 
 ---
 
 4. Optionally Run the script with appropriate command-line options:
+    
 
-    -i or -I for installation.
+    | Option | Description                  |
+    |--------|------------------------------|
+    | **-i, -I** | *Installation*                 |
+    | **-n**    | *Non-destructive installation* |
+    | **-u**    | *Update*                       |
+    | **-l**    | *Information listing*          |
 
-    -n for non-destructive installation.
-
-    -u for update.
-
-    -l for information listing.
 
 Follow on-screen prompts and instructions for each operation.
 
