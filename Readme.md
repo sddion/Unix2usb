@@ -21,9 +21,9 @@ The Unix2usb is a shell script allows you to create bootable USB drives with ven
    ```
 ---
 
-<div align="center">
-  <img height="400" width="700" src="https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.gif"  />
-</div>
+<p align="center">
+  <img height="400" width="700" src="https://github.com/d10xi24/Unix2Usb/blob/main/demo/unix2usb.gif" />
+</p>
 
 ---
 
