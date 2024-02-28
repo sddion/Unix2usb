@@ -28,14 +28,6 @@
             "class": "archlinux"
         },
         {
-            "key": "bootrepair",
-            "class": "bootrepair"
-        },
-        {
-            "key": "bootrepairdisk",
-            "class": "bootrepairdisk"
-        },
-        {
             "key": "dir",
             "class": "dir"
         },
@@ -52,13 +44,8 @@
             "class": "kali"
         },
         {
-            "key": "uefi",
-            "class": "uefi"
-        },
-        {
-            "key": "search",
-            "class": "search"
-        }
-        
+            "key": "EFI",
+            "class": "EFI"
+        }   
     ]  
 }
