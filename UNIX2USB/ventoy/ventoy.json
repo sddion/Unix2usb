@@ -15,33 +15,25 @@
     },
     "menu_class": [
         {
-            "key": "ubuntu",
-            "class": "linux"
-        },
-        {
+            "dir": "/ISO/DebianISO",
             "key": "debian",
-            "class": "linux"
+            "class": "debian"
         },
         {
-            "key": "arch",
-            "class": "linux"
-        },
-        {
-            "key": "kali",
-            "class": "linux"
-        },
-        {
+            "dir": "/ISO/WindowsISO",
             "key": "windows",
             "class": "windows"
+        },
+        {
+            "dir": "/ISO/ArchISO",
+            "key": "arch",
+            "class": "arch"
+        },
+        {
+            "dir": "/ISO/LinuxISO",
+            "key": "linux",
+            "class": "linux"
         }
     ],
-    "icon": {
-        "archlinux": "/ventoy/UNIX/icons/archlinux.png",
-        "debian": "/ventoy/UNIX/icons/debian.png",
-        "kali": "/ventoy/UNIX/icons/kali.png",
-        "linux": "/ventoy/UNIX/icons/linux.png",
-        "txt": "/ventoy/UNIX/icons/txt.png",
-        "ubuntu": "/ventoy/UNIX/icons/ubuntu.png",
-        "windows": "/ventoy/UNIX/icons/windows.png"
-    }
+    "icon_dir": "/ventoy/UNIX/icons"
 }
