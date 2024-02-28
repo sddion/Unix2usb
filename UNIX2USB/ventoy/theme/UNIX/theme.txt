@@ -79,7 +79,7 @@ menu-tip-color: "#ffffff"
 
   menu_pixmap_style = "menu_*.png"
 
-  item_font = "Terminus Regular 16"
+  item_font = "Terminus Regular 18"
   item_color = "#ffffff"  
   item_height = 32
   item_spacing = 5
@@ -88,7 +88,7 @@ menu-tip-color: "#ffffff"
   icon_width = 26
   icon_height = 24
   
-  selected_item_font = "Terminus Regular 16"
+  selected_item_font = "Terminus Regular 18"
   selected_item_color= "#ffffff"
   selected_item_pixmap_style = "select_*.png"
 
