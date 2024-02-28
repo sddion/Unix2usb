@@ -13,27 +13,52 @@
             "/ventoy/UNIX/terminus-10.pf2"
         ]
     },
+    "icon_dir": "/ventoy/UNIX/icons",
     "menu_class": [
         {
-            "dir": "/ISO/DebianISO",
             "key": "debian",
             "class": "debian"
         },
         {
-            "dir": "/ISO/WindowsISO",
             "key": "windows",
             "class": "windows"
         },
         {
-            "dir": "/ISO/ArchISO",
-            "key": "arch",
-            "class": "arch"
+            "key": "archlinux",
+            "class": "archlinux"
         },
         {
-            "dir": "/ISO/LinuxISO",
-            "key": "linux",
-            "class": "linux"
+            "key": "bootrepair",
+            "class": "bootrepair"
+        },
+        {
+            "key": "bootrepairdisk",
+            "class": "bootrepairdisk"
+        },
+        {
+            "key": "dir",
+            "class": "dir"
+        },
+        {
+            "key": "iso",
+            "class": "iso"
+        },
+        {
+            "key": "macOS",
+            "class": "macOS"
+        },
+        {
+            "key": "kali",
+            "class": "kali"
+        },
+        {
+            "key": "uefi",
+            "class": "uefi"
+        },
+        {
+            "key": "search",
+            "class": "search"
         }
-    ],
-    "icon_dir": "/ventoy/UNIX/icons"
+        
+    ]  
 }
