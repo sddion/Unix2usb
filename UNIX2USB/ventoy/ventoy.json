@@ -42,10 +42,14 @@
         {
             "key": "kali",
             "class": "kali"
+        },  
+        {
+            "key": "linux",
+            "class": "linux"
         },
         {
-            "key": "EFI",
-            "class": "EFI"
-        }   
+            "key": "ubuntu",
+            "class": "ubuntu"
+        }      
     ]  
 }

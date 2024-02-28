@@ -49,9 +49,9 @@ Follow on-screen prompts and instructions for each operation.
 - Fast and Easy to Use
 - ISO drag and drop Support .
 - Supports multiple package managers for installing exFAT support(automatically installed if missing)
-- Custom Boot Menu :
+- Custom Theme :
 <p align="center">
-  <img height="200" width="400" src="demo/Unix2usb-grub.jpg" />
+  <img height="300" width="800" src="demo/Unix2usb-grub.jpg" />
 </p>
 
 ## License:
