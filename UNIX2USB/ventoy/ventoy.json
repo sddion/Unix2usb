@@ -2,15 +2,46 @@
     "control":[
         { "VTOY_DEFAULT_MENU_MODE": "1" },
         { "VTOY_TREE_VIEW_MENU_STYLE": "1" },
-        { "VTOY_DEFAULT_SEARCH_ROOT": "/UNIXISO" }
+        { "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" }
     ],
     "theme":{
-        "file": "/ventoy/theme/UNIX/theme.txt",
+        "file": "/ventoy/UNIX/theme.txt",
         "fonts":[
-            "/ventoy/theme/UNIX/terminus-12.pf2",
-            "/ventoy/theme/UNIX/terminus-18.pf2",
-            "/ventoy/theme/UNIX/terminus-14.pf2",
-            "/ventoy/theme/UNIX/terminus-10.pf2"
+            "/ventoy/UNIX/terminus-12.pf2",
+            "/ventoy/UNIX/terminus-18.pf2",
+            "/ventoy/UNIX/terminus-14.pf2",
+            "/ventoy/UNIX/terminus-10.pf2"
         ]
+    },
+    "menu_class": [
+        {
+            "key": "ubuntu",
+            "class": "linux"
+        },
+        {
+            "key": "debian",
+            "class": "linux"
+        },
+        {
+            "key": "arch",
+            "class": "linux"
+        },
+        {
+            "key": "kali",
+            "class": "linux"
+        },
+        {
+            "key": "windows",
+            "class": "windows"
+        }
+    ],
+    "icon": {
+        "archlinux": "/ventoy/UNIX/icons/archlinux.png",
+        "debian": "/ventoy/UNIX/icons/debian.png",
+        "kali": "/ventoy/UNIX/icons/kali.png",
+        "linux": "/ventoy/UNIX/icons/linux.png",
+        "txt": "/ventoy/UNIX/icons/txt.png",
+        "ubuntu": "/ventoy/UNIX/icons/ubuntu.png",
+        "windows": "/ventoy/UNIX/icons/windows.png"
     }
 }

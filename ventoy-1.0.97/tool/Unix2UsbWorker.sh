@@ -410,7 +410,7 @@ if [ "$MODE" = "install" -a -z "$NONDESTRUCTIVE" ]; then
     vtinfo "Done preparing $DISK."
 	    vtinfo "Done preparing $DISK."
 	    echo "******************************************************************************"
-        echo "Now you can simply copy and paste ISO files into the "UNIXISO" folder on your USB"
+        echo "Now you can simply copy and paste ISO files into the "ISO" folder on your USB"
         echo "ISO files stored there will be detected and presented in a menu during USB boot."
         echo ""
         echo "switching back to regular user $SUDO_USER"
