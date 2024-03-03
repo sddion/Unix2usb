@@ -42,6 +42,10 @@
         {
             "key": "linux",
             "class": "linux"
+        },
+        {
+            "key": "iso",
+            "class": "iso"
         }
     ]
 }
