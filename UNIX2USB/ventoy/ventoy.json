@@ -5,9 +5,10 @@
         { "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" }
     ],
     "theme":{
-        "file": "/ventoy/themes/tk-ghoul/theme.txt",
-        "file": "/ventoy/themes/evil-dark/theme.txt",
-        "gfxmode": "max",
+        "file":[
+            "/ventoy/themes/tk-ghoul/theme.txt",
+            "/ventoy/themes/evil-dark/theme.txt"
+        ],
         "ventoy_top": "100%",
         "ventoy_color": "#000000",
         "fonts":[
@@ -24,7 +25,7 @@
         {
             "dir": "/ISO/Windows",
             "alias": "Windows"
-        },
+        }
     ],
     "menu_class":[
         {
