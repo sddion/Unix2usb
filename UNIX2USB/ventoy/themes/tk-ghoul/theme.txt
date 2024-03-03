@@ -1,0 +1,88 @@
+# Global Property
+title-text: ""
+
+desktop-image: "wp2107913.jpeg"
+desktop-color: "white"
+
+message-color: "blue"
+
+terminal-font: "Terminus Regular 18"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+menu-tip-left: "9%+2"
+menu-tip-top: "15%+9"
+menu-tip-color: "#ffffff"
+
+# Logo
++ image {
+  id = "__my_logo__"
+  left = 0%
+  top = 0%
+  file = "logo.png"
+}
+
+# Grub Hotkeys
++ hbox {
+  left = 6%-3
+  top = 85%+3
+  width = 0%
+  height = 25
+
+  + label {
+    text = "@KEYMAP_SHORT@"
+    color = "green"
+    align = "left"
+    font = "Terminus Regular 18"
+  }
+}
+
+# Vtoy Hotkeys
++ hbox { 
+  left = 6%-3
+  top = 90%+3
+  width = 0%
+  height = 25
+
+  + label {
+    text = "@VTOY_HOTKEY_TIP@"
+    color = "green"
+    align = "left"
+    font = "Terminus Regular 18"
+  }
+}
+
+
+# Menu
++ boot_menu {
+  left = 5%
+  width = 66%
+  top = 15%
+  height = 70%
+
+  menu_pixmap_style = "menu_*.png"
+
+  item_font = "Cascadia code 18"
+  item_color = "#ffffff"  
+  item_height = 32
+  item_spacing = 5
+  item_padding = 10
+
+  icon_width = 26
+  icon_height = 24
+  
+  selected_item_font = "Cascadia code 18"
+  selected_item_color= "#ffffff"
+  selected_item_pixmap_style = "select_*.png"
+
+  item_icon_space = 15
+
+  scrollbar = true
+  scrollbar_width = 16
+  scrollbar_thumb = "slider_*.png"
+}
+

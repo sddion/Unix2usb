@@ -1,0 +1,50 @@
+# Global Property
+
+desktop-image: "background.png"
+desktop-color: "black"
+
+message-color: "white"
+
+terminal-font: "Terminus Regular 16"
+terminal-box: "menu_bkg_*.png"
+terminal-left: "19%"
+terminal-top: "35%"
+terminal-width: "70%"
+terminal-height: "50%"
+terminal-border: "0"
+
+
+# Menu
++ boot_menu {
+  left = 34%
+  width = 60%
+  top = 10%
+  height = 70%
+  align="center"
+  item_align = "center"
+
+  menu_pixmap_style = "menu_*.png"
+
+  item_font = "Cascadia code 18"
+  item_color = "#ffffff"  
+  item_height = 32
+  item_spacing = 8
+  item_padding = 15
+
+  icon_width = 24
+  icon_height = 24
+  item_icon_space = 2
+
+  selected_item_align = "center"
+  selected_item_font = "Cascadia code 20"
+  selected_item_color= "#ffffff"
+  selected_item_pixmap_style = "select_*.png"
+
+  item_icon_space = 15
+
+  scrollbar = true
+  scrollbar_width = 14
+  scrollbar_thumb = "sb_thumb_*.png"
+  scrollbar_frame = "sb_frame_*.png"
+}
+

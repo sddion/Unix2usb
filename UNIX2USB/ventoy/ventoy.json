@@ -5,51 +5,43 @@
         { "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" }
     ],
     "theme":{
-        "file": "/ventoy/UNIX/theme.txt",
+        "file": "/ventoy/themes/tk-ghoul/theme.txt",
+        "file": "/ventoy/themes/evil-dark/theme.txt",
+        "gfxmode": "max",
+        "ventoy_top": "100%",
+        "ventoy_color": "#000000",
         "fonts":[
-            "/ventoy/UNIX/terminus-12.pf2",
-            "/ventoy/UNIX/terminus-18.pf2",
-            "/ventoy/UNIX/terminus-14.pf2",
-            "/ventoy/UNIX/terminus-10.pf2"
+            "/ventoy/themes/tk-ghoul/UNIX/terminus-18.pf2",
+            "/ventoy/themes/tk-ghoul/CascadiaCode-20.pf2",
+            "/ventoy/themes/tk-ghoul/CascadiaCode-18.pf2"
         ]
     },
-    "icon_dir": "/ventoy/UNIX/icons",
-    "menu_class": [
+     "menu_alias":[
         {
-            "key": "debian",
-            "class": "debian"
+            "dir": "/ISO/Linux",
+            "alias": "Linux"
         },
         {
-            "key": "windows",
-            "class": "windows"
+            "dir": "/ISO/Windows",
+            "alias": "Windows"
         },
+    ],
+    "menu_class":[
         {
-            "key": "archlinux",
-            "class": "archlinux"
-        },
-        {
-            "key": "dir",
+            "dir": "/ISO/Linux",
             "class": "dir"
         },
         {
-            "key": "iso",
-            "class": "iso"
+            "dir": "/ISO/Windows",
+            "class": "dir"
         },
         {
-            "key": "macOS",
-            "class": "macOS"
+            "key": "Windows",
+            "class": "Windows"
         },
-        {
-            "key": "kali",
-            "class": "kali"
-        },  
         {
             "key": "linux",
             "class": "linux"
-        },
-        {
-            "key": "ubuntu",
-            "class": "ubuntu"
-        }      
-    ]  
+        }
+    ]
 }
