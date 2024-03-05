@@ -291,22 +291,30 @@ if [ "$MODE" = "install" -a -z "$NONDESTRUCTIVE" ]; then
 
     if [ -n "$RESERVE_SPACE" ]; then
         echo "You will reserve $RESERVE_SIZE_MB MB disk space "
+        display_warning
     fi
 
-    vtwarn "==================== WARNING! ===================="
-    vtwarn "     The Selected $DISK will be formatted."
-    vtwarn "  All existing data on disk $DISK will be lost."
-    vtwarn " Backup files you wish to keep before proceeding!"
-    vtwarn "==================== WARNING! ===================="
-    echo ""
-
-
-    read -p 'Continue? (y/n) '  Answer
-    if [ "$Answer" != "y" ]; then
-        if [ "$Answer" != "Y" ]; then
+    display_warning() {
+    if [ -z "$DISPLAY" ]; then
+        # If running in a terminal
+        vtwarn "==================== WARNING! ===================="
+        vtwarn "     The Selected $DISK will be formatted."
+        vtwarn "  All existing data on disk $DISK will be lost."
+        vtwarn " Backup files you wish to keep before proceeding!"
+        vtwarn "==================== WARNING! ===================="
+        echo ""
+        read -p 'Continue? (y/n) '  Answer
+        if [ "$Answer" != "y" ] && [ "$Answer" != "Y" ]; then
+            exit 0
+        fi
+    else
+        if ! zenity --question --text="The Selected $DISK will be formatted. All existing data on disk $DISK will be lost. Backup files you wish to keep before proceeding! Do you want to continue?"; then
             exit 0
         fi
     fi
+}
+
+    display_warning
 
     if [ $disk_sector_num -le $VENTOY_SECTOR_NUM ]; then
         vterr "No enough space in disk $DISK"

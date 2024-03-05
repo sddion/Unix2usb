@@ -23,7 +23,7 @@
 
 
 VENT_VER="ventoy-1.0.97"
-  #. ./$VENT_VER/tool/ventoy_lib.sh
+  . ./$VENT_VER/tool/ventoy_lib.sh
   echo -e '\0033\0143'
 
 # Declare arrays to store device names, sizes, and models
@@ -155,7 +155,7 @@ fi
    if [ -d "${mountpoint}/UNIX" ]; then
      sudo umount "/dev/$selected_device"
      echo -e "\n*************************************************"
-     echo " UNIX is already installed. But you can upgrade or reinstall."
+     echo " Unix2usb is already installed. But you can upgrade or reinstall."
      sudo ./Unix2Disk.sh -u -L UNIX "/dev/$selected_device"
    else
      sudo umount "/dev/$selected_device"

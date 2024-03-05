@@ -54,6 +54,18 @@ Follow on-screen prompts and instructions for each operation.
   <img height="300" width="800" src="demo/Unix2usb-grub.jpg" />
 </p>
 
+# Updates
+
+Here you will find updates and changes made to Unix2usb
+
+### Graphical User Interface (GUI) 
+
+Unix2usb now comes with a graphical user interface (GUI) for a more user-friendly experience. The GUI provides interactive prompts and progress indicators during the installation process.
+
+To use the GUI:
+1. Make the script executable: `sudo chmod +x UnixGui.sh`
+2. Run the script `./Unix2Gui.sh` as usual.
+
 ## License:
 
 This script is licensed under the GNU General Public License (GPL). See the script header for details.
