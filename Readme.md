@@ -2,7 +2,7 @@
 ---
 
 <p align="left">
-  <img height="2800" width="400" src="demo/logo.png" />
+  <img height="280" width="400" src="demo/logo.png" />
   <img align="right" height="280" width="450" src="demo/unix2usb.gif" />
 </p>
 
