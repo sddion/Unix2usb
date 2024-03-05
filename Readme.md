@@ -25,7 +25,7 @@ Unix2usb is a shell script allows you to create bootable USB drives with ventoy 
 ---
 
 <p align="center">
-  <img height="280" width="450" src="demo/unix2usb.gif" />
+  <img height="300" width="750" src="demo/unix2usb.gif" />
 </p>
 
 ---
@@ -51,7 +51,7 @@ Follow on-screen prompts and instructions for each operation.
 - Supports multiple package managers for installing exFAT support(automatically installed if missing)
 - Custom Theme :
 <p align="center">
-  <img height="300" width="800" src="demo/Unix2usb-grub.jpg" />
+  <img height="300" width="650" src="demo/Unix2usb-grub.jpg" />
 </p>
 
 # Updates
