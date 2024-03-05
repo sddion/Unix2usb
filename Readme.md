@@ -1,9 +1,8 @@
 # Unix2usb
----
-<div style="width: 850px;">
-  <img height="280" width="400" src="demo/logo.png" style="float: left; margin-right: 10px;" />
-  <img height="280" width="450" src="demo/unix2usb.gif" style="float: right; margin-left: 10px;" />
-</div>
+
+<p align="center">
+  <img height="180" width="150" src="demo/logo.png" />
+</p>
 
 ---
 
@@ -23,6 +22,14 @@ Unix2usb is a shell script allows you to create bootable USB drives with ventoy 
    ```
    ./Unix2usb.sh
    ```
+---
+
+<p align="center">
+  <img height="280" width="450" src="demo/unix2usb.gif" />
+</p>
+
+---
+
 4. Optionally Run the script with appropriate command-line options:
     
 
