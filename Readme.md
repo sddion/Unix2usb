@@ -1,7 +1,7 @@
 # Unix2usb
 
 <p align="center">
-  <img height="180" width="150" src="demo/logo.png" />
+  <img height="150" width="200" src="demo/logo.png" />
 </p>
 
 ---
