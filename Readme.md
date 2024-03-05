@@ -1,9 +1,8 @@
 # Unix2usb
 ---
-
-<p align="left">
-  <img height="280" width="400" src="demo/logo.png" />
-  <img align="right" height="280" width="450" src="demo/unix2usb.gif" />
+<p>
+  <img height="280" width="400" src="demo/logo.png" style="float: left; margin-right: 10px;" />
+  <img height="280" width="450" src="demo/unix2usb.gif" style="float: right; margin-left: 10px;" />
 </p>
 
 ---
