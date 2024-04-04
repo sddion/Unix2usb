@@ -12,7 +12,7 @@ Unix2usb is a shell script allows you to create bootable USB drives with ventoy 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/d10xi24/Unix2usb.git
+   git clone https://github.com/sddion/Unix2usb.git
    ```
 2. Make the script executable:
    ```
